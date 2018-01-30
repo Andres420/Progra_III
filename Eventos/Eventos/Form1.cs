@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Cod_Negocio;
 
 namespace Eventos
 {
@@ -15,6 +16,11 @@ namespace Eventos
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void btnInsertar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
