@@ -26,6 +26,10 @@ namespace Eventos
                 {
                     Codigo cod = new Codigo();
                     bool agregado = cod.Insertar_Estudiante(int.Parse(txtCedula.Text), txtNombre.Text, dtpFechaNaci.Text, txtResidencia.Text);
+                    if (agregado)
+                    {
+                        MessageBox.Show("agregado");
+                    }
                 }
                 catch (Exception)
                 {
@@ -42,7 +46,11 @@ namespace Eventos
 
         private void cbEstudiantes_SelectionChangeCommitted(object sender, EventArgs e)
         {
-
+            Codigo cod = new Codigo();
+            if (!cbEstudiantes.SelectedItem.Equals("(Seleccione)"))
+            {
+                cod.Ver_Informacion_Est(txtCedulaCon, txtNombreCon, dtpFechaNaciCon, txtResidenciaCon, cbEstudiantes, int.Parse(cbEstudiantes.SelectedItem.ToString()));
+            }
         }
     }
 }
