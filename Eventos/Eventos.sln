@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eventos", "Eventos\Eventos.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cod_Neg", "ClassLibrary1\Cod_Neg.csproj", "{A67169DB-CDE3-4E86-AE82-E397C1F7A214}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DB_Cod", "DB_Cod\DB_Cod.csproj", "{B429C648-790E-41A2-B79D-F8D0AE00FA01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A67169DB-CDE3-4E86-AE82-E397C1F7A214}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A67169DB-CDE3-4E86-AE82-E397C1F7A214}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A67169DB-CDE3-4E86-AE82-E397C1F7A214}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B429C648-790E-41A2-B79D-F8D0AE00FA01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B429C648-790E-41A2-B79D-F8D0AE00FA01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B429C648-790E-41A2-B79D-F8D0AE00FA01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B429C648-790E-41A2-B79D-F8D0AE00FA01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

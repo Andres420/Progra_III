@@ -30,18 +30,16 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnInsertar = new System.Windows.Forms.Button();
-            this.txtCedula = new System.Windows.Forms.TextBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtResidencia = new System.Windows.Forms.TextBox();
             this.dtpFechaNaci = new System.Windows.Forms.DateTimePicker();
-            this.cbEstudiantes = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.txtResidencia = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtCedula = new System.Windows.Forms.TextBox();
+            this.btnInsertar = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dtpFechaNaciCon = new System.Windows.Forms.DateTimePicker();
             this.txtResidenciaCon = new System.Windows.Forms.TextBox();
             this.txtNombreCon = new System.Windows.Forms.TextBox();
@@ -50,6 +48,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbEstudiantes = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -64,6 +64,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(501, 286);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -84,6 +85,80 @@
             this.tabPage1.Text = "Insertar Estudiante";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // dtpFechaNaci
+            // 
+            this.dtpFechaNaci.Location = new System.Drawing.Point(134, 96);
+            this.dtpFechaNaci.Name = "dtpFechaNaci";
+            this.dtpFechaNaci.Size = new System.Drawing.Size(200, 20);
+            this.dtpFechaNaci.TabIndex = 8;
+            // 
+            // txtResidencia
+            // 
+            this.txtResidencia.Location = new System.Drawing.Point(134, 127);
+            this.txtResidencia.Name = "txtResidencia";
+            this.txtResidencia.Size = new System.Drawing.Size(100, 20);
+            this.txtResidencia.TabIndex = 7;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(134, 67);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.TabIndex = 6;
+            // 
+            // txtCedula
+            // 
+            this.txtCedula.Location = new System.Drawing.Point(134, 36);
+            this.txtCedula.Name = "txtCedula";
+            this.txtCedula.Size = new System.Drawing.Size(100, 20);
+            this.txtCedula.TabIndex = 5;
+            // 
+            // btnInsertar
+            // 
+            this.btnInsertar.Location = new System.Drawing.Point(221, 188);
+            this.btnInsertar.Name = "btnInsertar";
+            this.btnInsertar.Size = new System.Drawing.Size(75, 23);
+            this.btnInsertar.TabIndex = 4;
+            this.btnInsertar.Text = "Insertar";
+            this.btnInsertar.UseVisualStyleBackColor = true;
+            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(56, 130);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Residencia";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(56, 99);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(75, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Fecha de naci";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(56, 67);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Nombre";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(56, 36);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Cédula";
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.dtpFechaNaciCon);
@@ -103,98 +178,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Consultar Estudiante";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(56, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Cédula";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(56, 67);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Nombre";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(56, 99);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Fecha de naci";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(56, 130);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Residencia";
-            // 
-            // btnInsertar
-            // 
-            this.btnInsertar.Location = new System.Drawing.Point(221, 188);
-            this.btnInsertar.Name = "btnInsertar";
-            this.btnInsertar.Size = new System.Drawing.Size(75, 23);
-            this.btnInsertar.TabIndex = 4;
-            this.btnInsertar.Text = "Insertar";
-            this.btnInsertar.UseVisualStyleBackColor = true;
-            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
-            // 
-            // txtCedula
-            // 
-            this.txtCedula.Location = new System.Drawing.Point(134, 36);
-            this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(100, 20);
-            this.txtCedula.TabIndex = 5;
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(134, 67);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
-            this.txtNombre.TabIndex = 6;
-            // 
-            // txtResidencia
-            // 
-            this.txtResidencia.Location = new System.Drawing.Point(134, 127);
-            this.txtResidencia.Name = "txtResidencia";
-            this.txtResidencia.Size = new System.Drawing.Size(100, 20);
-            this.txtResidencia.TabIndex = 7;
-            // 
-            // dtpFechaNaci
-            // 
-            this.dtpFechaNaci.Location = new System.Drawing.Point(134, 96);
-            this.dtpFechaNaci.Name = "dtpFechaNaci";
-            this.dtpFechaNaci.Size = new System.Drawing.Size(200, 20);
-            this.dtpFechaNaci.TabIndex = 8;
-            // 
-            // cbEstudiantes
-            // 
-            this.cbEstudiantes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbEstudiantes.FormattingEnabled = true;
-            this.cbEstudiantes.Location = new System.Drawing.Point(51, 38);
-            this.cbEstudiantes.Name = "cbEstudiantes";
-            this.cbEstudiantes.Size = new System.Drawing.Size(121, 21);
-            this.cbEstudiantes.TabIndex = 0;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(51, 19);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 13);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Lista de estudiantes";
             // 
             // dtpFechaNaciCon
             // 
@@ -263,6 +246,25 @@
             this.label9.Size = new System.Drawing.Size(40, 13);
             this.label9.TabIndex = 9;
             this.label9.Text = "Cédula";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(51, 19);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(101, 13);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Lista de estudiantes";
+            // 
+            // cbEstudiantes
+            // 
+            this.cbEstudiantes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEstudiantes.FormattingEnabled = true;
+            this.cbEstudiantes.Location = new System.Drawing.Point(51, 38);
+            this.cbEstudiantes.Name = "cbEstudiantes";
+            this.cbEstudiantes.Size = new System.Drawing.Size(121, 21);
+            this.cbEstudiantes.TabIndex = 0;
+            this.cbEstudiantes.SelectionChangeCommitted += new System.EventHandler(this.cbEstudiantes_SelectionChangeCommitted);
             // 
             // Form1
             // 
